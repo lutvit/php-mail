@@ -58,5 +58,5 @@ if (send_mail($recipient, $sender, $subject, $message) ) {
 
 ### To Do
 
-* Implement SMTP-support
-* Implement multipart (plain text and HTML)
+* Implement SMTP support
+* Implement multipart (plain text and HTML) support

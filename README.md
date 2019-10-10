@@ -1,5 +1,7 @@
 # php-mail
 
+A custom function for PHP to send emails with full UTF-8 support and Base64 encoded. You can see the Mail function live in action at [NewsletterMarketer](https://www.newslettermarketer.de/) by visiting the contact form page.
+
 ### English description
 
 The build-in mail function in PHP is usable, but unfortunately it has limited functionality. We can send emails with it, but we have practically no control over the body and headers part of the email. 

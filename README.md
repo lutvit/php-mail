@@ -1,4 +1,4 @@
-# php-mail
+# Custom PHP-Mail
 
 A custom function for PHP to send emails with full UTF-8 support and Base64 encoded. You can see the Mail function live in action at [NewsletterMarketer](https://www.newslettermarketer.de/) by visiting the contact form page. Besides the usage at NewsletterMarketer, I use the same mail function to send bulk emails.
 

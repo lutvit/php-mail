@@ -6,7 +6,7 @@ A custom function for PHP to send emails with full UTF-8 support and Base64 enco
 
 The build-in mail function in PHP is usable, but unfortunately it has limited functionality. We can send emails with it, but we have practically no control over the body and headers part of the email. 
 
-Here, the custom PHP-mail function can help, we can:
+Here, the custom PHP-mail function can help:
 
 * Define recipients name and email address
 * Define sender name and email address

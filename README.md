@@ -28,7 +28,8 @@ Hier kommt die benutzerdefinierte PHP-Mail-Funktion ins Spiel:
 
 ### Usage
 
-```<?php
+```php
+<?php
 
 //$recipient  = array('Lisa Doe', 'recipient@mail.com');
 $recipient  = 'recipient@mail.com';

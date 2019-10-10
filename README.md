@@ -20,8 +20,8 @@ Die eingebaute PHP-Funktion ist brauchbar, aber leider hat es eine sehr eingesch
 
 Hier kommt die benutzerdefinierte PHP-Mail-Funktion ins Spiel:
 
-* Definiere den Namen und E-Mail-Adresse für Empfänger
-* Definiere den Namen und E-Mail-Adresse für Versender
+* Definiere den Namen und E-Mail-Adresse vom Empfänger
+* Definiere den Namen und E-Mail-Adresse vom Versender
 * Vollständiger Support für HTML-Content (automatische Erkennung)
 * Vollständiger Support für UTF-8
 * Der Inhalt ist mit Base64 sicher kodiert

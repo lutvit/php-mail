@@ -12,8 +12,8 @@
  */
 function send_mail($recipient = '', $sender = '', $subject = '', $message = '', $is_html = false) {
 
-  // Determine if HTML content
-  if (substr_count($message, '<html') || substr_count($message, '<body')) {
+  // Detect HTML markdown
+  if (substr_count($message, '</') >= 1) {
     $is_html = true;
   }
 

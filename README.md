@@ -39,13 +39,13 @@ $sender = 'sender@mail.com';
 $subject = 'Hey, how you doing?';
 
 // Plain text
-$content = '
+$message = '
   Hey,
   long time no see, everything is fine?
 ';
 
-// HTML
-$content = '
+// or HTML
+$message = '
   <p>Hey,<br>long time no see, everything is fine?</p>
 ';
 

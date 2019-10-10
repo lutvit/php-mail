@@ -49,6 +49,7 @@ $message = '
   <p>Hey,<br>long time no see, everything is fine?</p>
 ';
 
+// Send email
 if (send_mail($recipient, $sender, $subject, $message) ) {
   echo 'Email has been sent!';
 } else {

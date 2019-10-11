@@ -17,31 +17,14 @@ function send_mail($recipient = '', $sender = '', $subject = '', $message = '', 
     $is_html = true;
   }
 
-  // Recipient details
-  $recipient_name = '';
-  $recipient_email_address = '';
-
+  // Build recipient name <email> pair
   if (is_array($recipient)) {
-    $recipient_name = $recipient[0];
-    $recipient_email_address = $recipient[1];
-
-    $to = '=?UTF-8?B?' . base64_encode($recipient_name) . '?= <' . $recipient_email_address . '>';
-  } else {
-    $recipient_email_address = '';
-    $to = $recipient;
+    $recipient = '=?UTF-8?B?' . base64_encode($recipient[0]) . '?= <' . $recipient[1] . '>';
   }
 
-  // Sender details
-  $sender_name = '';
-  $sender_email_address = '';
-
+  // Build sender name <email> pair
   if (is_array($sender)) {
-    $sender_name = $sender[0];
-    $sender_email_address = $sender[1];
-
-    $from = '=?UTF-8?B?' . base64_encode($sender_name) . '?= <' . $sender_email_address . '>';
-  } else {
-    $from = $sender;
+    $sender = '=?UTF-8?B?' . base64_encode($sender[0]) . '?= <' . $sender[1] . '>';
   }
 
   // Determine content type
@@ -59,13 +42,12 @@ function send_mail($recipient = '', $sender = '', $subject = '', $message = '', 
   $header .= 'Content-Transfer-Encoding: base64' . "\r\n";
   $header .= 'Date: ' . date('r (T)') . "\r\n";
 
-  $header .= 'From: ' . $from . "\r\n";
-  $header .= 'Reply-To: ' . $from . "\r\n";
-  $header .= 'To: ' . $to . "\r\n";
+  $header .= 'From: ' . $sender . "\r\n";
+  $header .= 'Reply-To: ' . $sender . "\r\n";
 
   $header .= 'X-Mailer: PHP ' . phpversion();
 
-  if (mail($recipient_email_address, $subject, base64_encode($message), $header)) {
+  if (mail($recipient, $subject, base64_encode($message), $header)) {
     return true;
   } else {
     return false;
